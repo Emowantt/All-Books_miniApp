@@ -87,7 +87,7 @@ const products = [
       },
 ]
 
-const getTotalPrice = (items = []) => {
+const getTotalPrice = (items = [],) => {
     return items.reduce((acc, item) => {
         return acc += item.price
     }, 0)
@@ -113,7 +113,7 @@ const ProductList = () => {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
-            tg.MainButton.setParams({ text: 'Купить' + {getTotalPrice} })
+            tg.MainButton.setParams({ text: 'Купить'})
         }
     }
 
