@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 15px;
     width: 170px;
-    border: 2px;
+    border: 1px solid var(--tg-theme-button-color);
 }
 
 .img {
@@ -13,3 +13,9 @@
     margin: 0 auto;
     background: var(--tg-theme-button-color);
 }
+
+.product {
+    font-size: 0.8em;
+}
+
+
