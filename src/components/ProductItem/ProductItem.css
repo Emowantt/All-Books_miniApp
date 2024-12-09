@@ -40,4 +40,8 @@
   .author, .category, .price {
     flex: 0 0 auto; /* Запрет на сжатие для других текстовых элементов */
   }
+
+.addBtn {
+    width: 100%;
+}
   
