@@ -15,11 +15,13 @@ function App() {
   })
 
   return (
-    <div className="App">
-      <Header/>
-      <Routes>
-        <Route index element={<ProductList />}/>
-      </Routes>
+    <div className="wrapper">
+      <div>
+        <Header/>
+        <Routes>
+          <Route index element={<ProductList />}/>
+        </Routes>
+      </div>
     </div> 
   );
 }
