@@ -10,7 +10,7 @@ const ProductItem = ({product, className, onAdd}) => {
 
     return (
         <div className={'product' + className}>
-            <div className='img'/>
+            <img src={"../../public/img/"+ this.props.item.img}></img>
             <div className='title'>{product.title}</div>
             <div className='author'>{product.author}</div>
             <div className='category'>{product.category}</div>

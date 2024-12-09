@@ -20,26 +20,26 @@
     height: 100px; /* Фиксированная высота изображения */
     background: var(--tg-theme-button-color);
     border-radius: 4px; /* Закругление углов изображения */
-    margin-bottom: 10px; /* Отступ снизу */
+    margin-bottom: 10px; 
   }
   
   .title, .author, .category, .price {
     margin: 5px 0;
     font-size: 14px;
     text-align: center;
-    overflow: hidden; /* Скрытие переполнения текста */
-    text-overflow: ellipsis; /* Добавление многоточия для длинного текста */
-    white-space: nowrap; /* Запрет на перенос текста */
-    max-height: 20px; /* Ограничение высоты для текстовых элементов */
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    max-height: 20px; 
   }
   
   
   .title {
-    flex: 0 1 auto; /* Позволяет заголовку занимать только необходимое пространство */
+    flex: 0 1 auto; 
   }
   
   .author, .category, .price {
-    flex: 0 0 auto; /* Запрет на сжатие для других текстовых элементов */
+    flex: 0 0 auto; 
   }
 
   .addBtn {
@@ -48,15 +48,15 @@
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     border: none;
-    border-radius: 4px; /* Закругление углов кнопки */
+    border-radius: 4px;
     outline: none;
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s; /* Плавный эффект фона и трансформации */
-    margin-top: auto; /* Позволяет кнопке оставаться внизу карточки */
+    transition: background 0.2s, transform 0.2s;
+    margin-top: auto;
 }
 
 .addBtn:hover {
-    background: darken(var(--tg-theme-button-color), 10%); /* Затемнение фона при наведении */
-    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    background: darken(var(--tg-theme-button-color), 10%);
+    transform: scale(1.05); 
 }
   
