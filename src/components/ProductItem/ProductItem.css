@@ -15,7 +15,12 @@
 }
 
 .product {
-    font-size: 0.8em;
+    width: 30%;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 20px;
+    background: #333333;
+    border-radius: 10px 10px;
 }
 
 
