@@ -76,15 +76,6 @@ const products = [
         desc: 'Lorem ipsum',
         price: '30.00',
       },
-      {
-        id: 9,
-        title: 'Странная история доктора Джекила и мистера Хайда',
-        img: '9.jpg',
-        autor: 'Роберт Льюис Стивенсон',
-        category: 'Повесть',
-        desc: 'Lorem ipsum',
-        price: '27.99',
-      },
 ]
 
 const getTotalPrice = (items = [],) => {
