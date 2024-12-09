@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <div className='header'>
-            <span className='logo'>All Books Shop</span>
+            
             <span className='username'>{tg.initDataUnsafe?.user?.username}</span>
         </div>
     );
