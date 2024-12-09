@@ -6,6 +6,8 @@
 }
 
 .item {
-    margin-right: 10px;
-    margin-bottom: 10px;
+    width: 30%;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 20px;
 }
