@@ -42,14 +42,21 @@
     flex: 0 0 auto; /* Запрет на сжатие для других текстовых элементов */
   }
 
-.addBtn {
+  .addBtn {
     width: 100%;
-    align-items: center;
     padding: 10px 15px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     border: none;
+    border-radius: 4px; /* Закругление углов кнопки */
     outline: none;
     cursor: pointer;
+    transition: background 0.2s, transform 0.2s; /* Плавный эффект фона и трансформации */
+    margin-top: auto; /* Позволяет кнопке оставаться внизу карточки */
+}
+
+.addBtn:hover {
+    background: darken(var(--tg-theme-button-color), 10%); /* Затемнение фона при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
 }
   
