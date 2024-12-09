@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../Button/Button';
 import './Header.css';
 
 
@@ -9,8 +8,8 @@ const Header = () => {
 
     return (
         <div className='header'>
-            <Button/>
-            <span>{tg.initDataUnsafe?.user?.username}</span>
+            <span className='logo'>All Books Shop</span>
+            <span className='username'>{tg.initDataUnsafe?.user?.username}</span>
         </div>
     );
 };
