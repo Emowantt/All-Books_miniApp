@@ -2,19 +2,19 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    width: 90%;
+    width: 170px;
     border: 1px solid var(--tg-theme-button-color);
 }
 
 .img {
     width: 100%;
-    border-radius: 10px 10px 10px 10px ;
-    transition: transform 500ms ease;
+    background: lightgray;
+    height: 100px;
+    margin: 0 auto;
     background: var(--tg-theme-button-color);
 }
 
-.title {
+.title, .author, .category, .price {
     margin: 15px 20px;
+
 }
-
-
