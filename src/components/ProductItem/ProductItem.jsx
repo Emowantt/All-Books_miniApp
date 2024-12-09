@@ -18,7 +18,7 @@ const ProductItem = ({product, className, onAdd}) => {
                 <b>{product.price}</b>
             </div>
             <Button className = {'addBtn'} onClick = {onAddHandler}>
-                +
+                Добавить в корзину
             </Button>
         </div>
     );
