@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import Button from '../Button/Button';
 import './ProductItem.css';
@@ -11,7 +10,7 @@ const ProductItem = ({product, className, onAdd}) => {
 
     return (
         <div className={'product' + className}>
-            <img src={"../../public/img/"+ this.props.item.img}></img>
+            <div className='img'/>
             <div className='title'>{product.title}</div>
             <div className='author'>{product.author}</div>
             <div className='category'>{product.category}</div>
