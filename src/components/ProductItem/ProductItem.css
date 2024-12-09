@@ -2,20 +2,26 @@
     display: flex;
     flex-direction: column;
     border: 1px solid var(--tg-theme-button-color);
-    padding: 15px;
-    width: 170px;
-    
-}
-
-.img {
+    border-radius: 8px; /* Закругление углов */
+    padding: 10px;
+    width: 150px; /* Ширина карточки */
+    transition: box-shadow 0.2s; /* Плавный эффект тени */
+  }
+  
+  .product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+  }
+  
+  .img {
     width: 100%;
-    background: lightgray;
     height: 100px;
-    margin: 0 auto;
     background: var(--tg-theme-button-color);
-}
-
-.title, .author, .category, .price {
-    margin: 15px 20px;
-
-}
+    border-radius: 4px; /* Закругление углов изображения */
+    margin-bottom: 10px; /* Отступ снизу */
+  }
+  
+  .title, .author, .category, .price {
+    margin: 5px 0; /* Отступы для текста */
+    font-size: 14px; /* Размер шрифта */
+    text-align: center; /* Центрирование текста */
+  }

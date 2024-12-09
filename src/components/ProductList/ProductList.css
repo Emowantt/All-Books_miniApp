@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.item {
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
+    gap: 15px; /* Пространство между элементами */
+  }
+  
+  .item {
+    flex: 1 1 150px; /* Адаптивная ширина для элементов */
+  }
