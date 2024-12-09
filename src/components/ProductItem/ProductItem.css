@@ -8,6 +8,7 @@
     height: 250px; /* Фиксированная высота карточки */
     transition: box-shadow 0.2s; /* Плавный эффект тени */
     overflow: hidden; /* Скрытие переполнения */
+    border: 1px solid var(--tg-theme-button-color);
   }
   
   .product:hover {
