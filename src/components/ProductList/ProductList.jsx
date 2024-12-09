@@ -87,12 +87,6 @@ const products = [
       },
 ]
 
-// const getTotalPrice = (items) => {
-//     return items.reduce((acc, item) => {
-//         return acc += item.price
-//     }, 0)
-// }
-
 const ProductList = () => {
 
     const [addedItems, setAddedItems] = useState([]);
@@ -109,7 +103,7 @@ const ProductList = () => {
 
         setAddedItems(newItems)
 
-        if(newItems. length === 0) {
+        if(newItems.length === 0) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
