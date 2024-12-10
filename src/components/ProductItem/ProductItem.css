@@ -31,6 +31,9 @@
   overflow: hidden; 
   max-height: 40px; /* Ограничение высоты заголовка */
   line-height: 1.2; /* Высота строки для лучшего отображения */
+  display: -webkit-box; /* Для поддержки многократного переноса текста */
+  -webkit-line-clamp: 2; /* Ограничение на 2 строки */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
 }
 
 .author, .category, .price {
