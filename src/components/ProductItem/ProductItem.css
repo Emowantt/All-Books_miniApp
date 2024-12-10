@@ -46,6 +46,7 @@
     width: 100%;
     margin-top: auto;
     padding: 10px 15px;
+    justify-content: center;
   }
 
   .button-container .addBtn {
