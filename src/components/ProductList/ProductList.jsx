@@ -11,7 +11,7 @@ const products = [
         autor: 'Говард Филлипс Лавкрафт',
         category: 'Ужасы',
         desc: 'Lorem ipsum',
-        price: '29',
+        price: '29.00',
       },
       {
         id: 2,
@@ -20,7 +20,7 @@ const products = [
         autor: 'Франц Кафка',
         category: 'Повесть',
         desc: 'Lorem ipsum',
-        price: '29',
+        price: '29.00',
       },
       {
         id: 3,
@@ -29,7 +29,7 @@ const products = [
         autor: 'Оскар Уайлд',
         category: 'Роман',
         desc: 'Lorem ipsum',
-        price: '29',
+        price: '29.00',
       },
       {
         id: 4,
@@ -38,7 +38,7 @@ const products = [
         autor: 'Иоганн Вольфганг фон Гёте',
         category: 'Драма',
         desc: 'Lorem ipsum',
-        price: '29',
+        price: '29.00',
       },
       {
         id: 5,
@@ -47,7 +47,7 @@ const products = [
         autor: 'Булгаков',
         category: 'Роман',
         desc: 'Lorem ipsum',
-        price: '29',
+        price: '29.00',
       },
       {
         id: 6,
@@ -56,7 +56,7 @@ const products = [
         autor: 'Анджей Сапковский',
         category: 'Фентези',
         desc: 'Lorem ipsum',
-        price: '239',
+        price: '239.00',
       },
       {
         id: 7,
@@ -65,7 +65,7 @@ const products = [
         autor: 'Братья Стругацкие',
         category: 'Фантастика',
         desc: 'Lorem ipsum',
-        price: '30',
+        price: '30.00',
       },
       {
         id: 8,
@@ -74,7 +74,7 @@ const products = [
         autor: 'Кентато Миура',
         category: 'Комикс',
         desc: 'Lorem ipsum',
-        price: '30',
+        price: '30.00',
       },
 ]
 

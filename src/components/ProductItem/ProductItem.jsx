@@ -17,7 +17,7 @@ const ProductItem = ({product, className, onAdd, onDelete}) => {
             <div className='author'>{product.author}</div>
             <div className='category'>{product.category}</div>
             <div className='price'>
-                <b>{product.price}</b>
+                <b>{product.price}₽</b>
             </div>
             <div className='.button-container'>
                 <button className = {'addBtn'} onClick = {onAddHandler}>
