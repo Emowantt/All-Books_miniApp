@@ -14,7 +14,7 @@ const ProductItem = ({product, className, onAdd, onDelete}) => {
         <div className={`product ${className}`}>
             <div className='img'/>
             <div className='title'>{product.title}</div>
-            <div className='author'>{product.author}</div>
+            <div className='author'>{product.autor}</div>
             <div className='category'>{product.category}</div>
             <div className='price'>
                 <b>{product.price}₽</b>
