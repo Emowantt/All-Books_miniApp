@@ -3,9 +3,9 @@
   flex-direction: column;
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
-  padding: 1rem; /* Отступы для карточки */
-  width: 200px; /* Ширина карточек */
-  height: 300px; /* Фиксированная высота для всех карточек */
+  padding: 1rem;
+  width: 200px;
+  height: 300px;
   overflow: hidden;
   margin-top: auto;
 }
@@ -15,53 +15,53 @@
   height: 100px; 
   background: var(--tg-theme-button-color);
   border-radius: 4px;
-  margin-bottom: 1rem; /* Отступ для изображения */
+  margin-bottom: 1rem;
 }
 
 .title, .author, .category, .price {
-  margin: 1rem 0; /* Отступы для текста */
-  font-size: 1rem; /* Размер шрифта */
+  margin: 1rem 0;
+  font-size: 1rem;
   text-align: center;
-  overflow: visible; /* Текст будет виден полностью */
-  white-space: normal; /* Текст может переноситься на несколько строк */
+  overflow: visible;
+  white-space: normal;
 }
 
 .title {
-  flex: 0 1 auto; /* Заголовок будет занимать необходимое пространство */
-  font-weight: bold; /* Жирный заголовок */
+  flex: 0 1 auto;
+  font-weight: bold;
 }
 
 .author, .category, .price {
-  flex: 0 0 auto; 
+  flex: 0 1 auto; 
 }
 
 .button-container {
   width: 100%;
   margin-top: auto;
-  padding: 0.5rem 0; /* Отступы сверху и снизу */
-  display: flex; /* Используйте flex для выравнивания */
-  justify-content: space-between; /* Равномерное распределение кнопок */
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-container .addBtn,
 .button-container .deleteBtn {
-  width: 40px; /* Ширина кнопок */
-  height: 40px; /* Высота кнопок */
+  width: 40px;
+  height: 40px;
   text-align: center;
-  line-height: 40px; /* Высота строки для кнопок */
-  border-radius: 4px; /* Радиус границы */
+  line-height: 40px;
+  border-radius: 4px;
   background: var(--tg-theme-button-color);
   color: var(--tg-theme-button-text-color);
   outline: none;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s; /* Анимация для кнопок */
+  transition: background 0.2s, transform 0.2s;
   border: none;
-  flex-shrink: 0; /* Предотвращает сжатие кнопок */
-  margin: 0 5px; /* Добавлен отступ по бокам для кнопок */
+  flex-shrink: 0;
+  margin: 0 5px;
 }
 
 .button-container .addBtn:active,
 .button-container .deleteBtn:active {
-  transform: scale(0.9); /* Уменьшение размера при нажатии */
-  background: darken(var(--tg-theme-button-color), 10%); /* Изменение фона при нажатии */
+  transform: scale(0.9);
+  background: darken(var(--tg-theme-button-color), 10%);
 }
