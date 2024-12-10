@@ -16,6 +16,7 @@
   background: var(--tg-theme-button-color);
   border-radius: 4px;
   margin-bottom: 0.1rem; /* Уменьшено значение margin-bottom */
+  align-items: center;
 }
 
 .title, .author, .category, .price {
