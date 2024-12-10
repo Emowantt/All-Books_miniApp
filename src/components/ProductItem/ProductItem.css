@@ -31,6 +31,7 @@
   overflow: hidden; 
   white-space: normal; /* Позволяет тексту переноситься на новую строку */
   line-height: 1.2; /* Высота строки для лучшего отображения */
+  flex-grow: 1;
 }
 
 .author, .category, .price {
