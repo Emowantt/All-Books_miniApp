@@ -9,6 +9,7 @@
     transition: box-shadow 0.2s; 
     overflow: hidden;
     border: 1px solid var(--tg-theme-button-color);
+    margin-top: auto;
   }
   
   .product:hover {
