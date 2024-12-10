@@ -78,8 +78,12 @@ const products = [
       },
 ]
 
-const getTotalPrice = (items) => {
-  return items.reduce((total, item) => total + item.price, 0).toFixed(2); // Суммируем цены и округляем до 2 знаков после запятой
+const getTotalPrice = (items = []) => {
+  const total = items.reduce((acc, item) => {
+      return acc + (item.price || 0); // Используем 0 как значение по умолчанию, если price отсутствует
+  }, 0);
+  
+  return total.toFixed(2); // Возвращаем сумму с двумя знаками после запятой
 };
 
 const ProductList = () => {
