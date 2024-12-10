@@ -91,15 +91,14 @@ const ProductList = () => {
 
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
-        let newItems = [];
 
-        if(alreadyAdded) {
-            return;
-        } else {
-            newItems = [...addedItems, product];
-        }
+        if (alreadyAdded) {
+          return; // Игнорируем повторное нажатие
+      }
 
-        setAddedItems(newItems)
+      // Если товар не добавлен, добавляем его в корзину
+      const newItems = [...addedItems, product];
+      setAddedItems(newItems);
 
         if(newItems.length === 0) {
             tg.MainButton.hide();
