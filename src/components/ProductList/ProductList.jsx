@@ -78,11 +78,9 @@ const products = [
       },
 ]
 
-const getTotalPrice = (items = [],) => {
-    return items.reduce((acc, item) => {
-        return acc += item.price
-    }, 0)
-}
+const getTotalPrice = (items) => {
+  return items.reduce((total, item) => total + item.price, 0).toFixed(2); // Суммируем цены и округляем до 2 знаков после запятой
+};
 
 const ProductList = () => {
 
@@ -94,7 +92,7 @@ const ProductList = () => {
         let newItems = [];
 
         if(alreadyAdded) {
-            newItems = addedItems.filter(item => item.id !== product.id)
+            return;
         } else {
             newItems = [...addedItems, product];
         }
