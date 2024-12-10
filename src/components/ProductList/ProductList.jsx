@@ -78,13 +78,11 @@ const products = [
       },
 ]
 
-const getTotalPrice = (items = []) => {
-  const total = items.reduce((acc, item) => {
-      return acc + (item.price || 0); // Используем 0 как значение по умолчанию, если price отсутствует
-  }, 0);
-  
-  return total.toFixed(2); // Возвращаем сумму с двумя знаками после запятой
-};
+const getTotalPrice = (items = [],) => {
+    return items.reduce((acc, item) => {
+        return acc += item.price
+    }, 0)
+}
 
 const ProductList = () => {
 
@@ -107,7 +105,7 @@ const ProductList = () => {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
-            tg.MainButton.setParams({ text: 'Купить' + getTotalPrice(newItems)})
+            tg.MainButton.setParams({ text: `Купить ${getTotalPrice(newItems)}`})
         }
     }
 
