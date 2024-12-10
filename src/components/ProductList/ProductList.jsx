@@ -90,14 +90,17 @@ const ProductList = () => {
 
   const onAdd = (product) => {
       const alreadyAdded = addedItems.find(item => item.id === product.id);
+      console.log('Trying to add:', product);
 
       if (alreadyAdded) {
+          console.log('Product already added:', product);
           return; // Игнорируем повторное нажатие
       }
 
       // Если товар не добавлен, добавляем его в корзину
       const newItems = [...addedItems, product];
       setAddedItems(newItems);
+      console.log('Added items:', newItems);
 
       tg.MainButton.show();
       tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽` });
@@ -105,7 +108,9 @@ const ProductList = () => {
 
   const onDelete = (product) => {
       const newItems = addedItems.filter(item => item.id !== product.id);
+      console.log('Trying to delete:', product);
       setAddedItems(newItems);
+      console.log('Remaining items:', newItems);
 
       if (newItems.length === 0) {
           tg.MainButton.hide();
@@ -118,7 +123,7 @@ const ProductList = () => {
       <div className='list'>
           {products.map(item => (
               <ProductItem 
-                  key={item.id} // Добавьте уникальный ключ для каждого элемента
+                  key={item.id} // Убедитесь, что у каждого продукта есть уникальный id
                   product={item}
                   onAdd={onAdd}
                   onDelete={onDelete}
@@ -127,6 +132,7 @@ const ProductList = () => {
       </div>
   );
 };
+
 
 
 export default ProductList;
