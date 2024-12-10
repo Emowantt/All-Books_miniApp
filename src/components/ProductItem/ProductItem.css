@@ -4,16 +4,10 @@
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
   padding: 1rem; /* Use rem for better responsiveness */
-  width: 200px; 
-  height: 300px; /* Установите фиксированную высоту для всех карточек */
-  transition: box-shadow 0.3s, transform 0.3s; /* Added transform for scaling */
+  width: 200px; /* Увеличено значение ширины карточек */
+  height: 300px; /* Фиксированная высота для всех карточек */
   overflow: hidden;
   margin-top: auto;
-}
-
-.product:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
-  transform: scale(1.02); /* Scale effect on hover */
 }
 
 .img {
@@ -61,13 +55,13 @@
   color: var(--tg-theme-button-text-color);
   outline: none;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s; /* Анимация для кнопок */
   border: none;
 }
 
-.button-container .addBtn:hover,
-.button-container .deleteBtn:hover {
-  background: darken(var(--tg-theme-button-color), 10%);
-  transform: scale(1.1); /* Slightly larger scale on hover */
+.button-container .addBtn:active,
+.button-container .deleteBtn:active {
+  transform: scale(0.9); /* Уменьшение размера при нажатии */
+  background: darken(var(--tg-theme-button-color), 10%); /* Изменение фона при нажатии */
 }
 
