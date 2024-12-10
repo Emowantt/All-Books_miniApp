@@ -102,4 +102,8 @@
     transition: background 0.2s, transform 0.2s;
   
 }
+.button-container .deleteBtn:hover {
+  background: darken(var(--tg-theme-button-color), 10%);
+  transform: scale(1.05); 
+}
   
