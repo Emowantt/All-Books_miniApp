@@ -14,25 +14,26 @@
 }
 
 .img {
-  width: 100%;
-  height: 100px; 
-  background: var(--tg-theme-button-color);
+  width: 100%; /* Занимает всю ширину родительского элемента */
+  height: 100px; /* Фиксированная высота для изображения */
+  background: var(--tg-theme-button-color); /* Цвет фона, если изображение не загружается */
   border-radius: 4px;
-  margin-bottom: 0.5rem; /* Используйте rem для лучшей отзывчивости */
+  margin-bottom: 0.5rem; /* Отступ снизу */
   display: flex; /* Центрирование изображения, если используется фактическое изображение */
   align-items: center;
   justify-content: center;
 }
 
 .title {
-  margin: 0.5rem 0; /* Используйте rem для лучшей отзывчивости */
-  font-size: 1rem; /* Используйте rem для лучшей отзывчивости */
-  text-align: center;
+  margin: 0.5rem 0; /* Отступы сверху и снизу */
+  font-size: 1rem; /* Размер шрифта */
+  text-align: center; /* Центрирование текста */
   overflow: hidden; 
   white-space: normal; /* Позволяет тексту переноситься на новую строку */
   line-height: 1.2; /* Высота строки для лучшего отображения */
-  flex-grow: 1;
+  flex-grow: 1; /* Позволяет заголовку занимать доступное пространство */
 }
+
 
 .author, .category, .price {
   margin: 0.5rem 0; /* Используйте rem для лучшей отзывчивости */
