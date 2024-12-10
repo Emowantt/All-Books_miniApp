@@ -6,6 +6,9 @@ const ProductItem = ({product, className, onAdd}) => {
     const onAddHandler = () => {
         onAdd(product);
     }
+    const onDeleteHandler = () => {
+        onDeleteHandler(product);
+    }
 
     return (
         <div className={'product' + className}>
@@ -17,7 +20,10 @@ const ProductItem = ({product, className, onAdd}) => {
                 <b>{product.price}</b>
             </div>
             <button className = {'addBtn'} onClick = {onAddHandler}>
-                Добавить в корзину
+                +
+            </button>
+            <button className='deleteBtn' onClick={onDeleteHandler}>
+                -
             </button>
         </div>
     );
