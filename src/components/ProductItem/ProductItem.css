@@ -3,7 +3,7 @@
   flex-direction: column;
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.5rem;
   width: 200px;
   height: 300px;
   overflow: hidden;
@@ -15,7 +15,7 @@
   height: 100px; 
   background: var(--tg-theme-button-color);
   border-radius: 4px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .title, .author, .category, .price {
