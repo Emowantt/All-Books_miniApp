@@ -3,7 +3,7 @@
   flex-direction: column;
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
-  padding: 1rem; /* Use rem for better responsiveness */
+  padding: 1.5rem; /* Увеличено значение отступа для лучшей адаптивности */
   width: 200px; /* Увеличено значение ширины карточек */
   height: 300px; /* Фиксированная высота для всех карточек */
   overflow: hidden;
@@ -15,21 +15,20 @@
   height: 100px; 
   background: var(--tg-theme-button-color);
   border-radius: 4px;
-  margin-bottom: 0.5rem; /* Use rem for better responsiveness */
+  margin-bottom: 1rem; /* Увеличен отступ для лучшей адаптивности */
 }
 
 .title, .author, .category, .price {
-  margin: 0.5rem 0; /* Use rem for better responsiveness */
-  font-size: 1rem; /* Use rem for better responsiveness */
+  margin: 1rem 0; /* Увеличены отступы для лучшей адаптивности */
+  font-size: 1rem; /* Используйте rem для лучшей адаптивности */
   text-align: center;
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  white-space: nowrap; /* Оставляем nowrap для однострочного отображения */
+  overflow: visible; /* Изменено на visible, чтобы текст был виден полностью */
+  white-space: normal; /* Изменено на normal, чтобы текст мог переноситься на несколько строк */
 }
 
 .title {
   flex: 0 1 auto; /* Заголовок будет занимать необходимое пространство */
-  font-weight: bold; /* Make title bold */
+  font-weight: bold; /* Сделать заголовок жирным */
 }
 
 .author, .category, .price {
@@ -39,18 +38,18 @@
 .button-container {
   width: 100%;
   margin-top: auto;
-  padding: 0.5rem; /* Use rem for better responsiveness */
-  display: flex; /* Use flex for better alignment */
-  justify-content: space-between; /* Space buttons evenly */
+  padding: 1rem; /* Увеличено значение отступа для лучшей адаптивности */
+  display: flex; /* Используйте flex для лучшего выравнивания */
+  justify-content: space-between; /* Равномерное распределение кнопок */
 }
 
 .button-container .addBtn,
 .button-container .deleteBtn {
-  width: 35px;
-  height: 35px;
+  width: 40px; /* Увеличена ширина кнопок */
+  height: 40px; /* Увеличена высота кнопок */
   text-align: center;
-  line-height: 35px;
-  border-radius: 4px; /* Consistent border-radius */
+  line-height: 40px; /* Увеличена высота строки для кнопок */
+  border-radius: 4px; /* Последовательный радиус границы */
   background: var(--tg-theme-button-color);
   color: var(--tg-theme-button-text-color);
   outline: none;
@@ -64,4 +63,3 @@
   transform: scale(0.9); /* Уменьшение размера при нажатии */
   background: darken(var(--tg-theme-button-color), 10%); /* Изменение фона при нажатии */
 }
-
