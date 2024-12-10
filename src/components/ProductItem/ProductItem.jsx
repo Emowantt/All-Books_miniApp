@@ -11,7 +11,7 @@ const ProductItem = ({product, className, onAdd, onDelete}) => {
     }
 
     return (
-        <div className={'product' + className}>
+        <div className={`product ${className}`}>
             <div className='img'/>
             <div className='title'>{product.title}</div>
             <div className='author'>{product.author}</div>
