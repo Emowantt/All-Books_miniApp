@@ -3,7 +3,7 @@
   flex-direction: column;
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
-  padding: 0.1rem;
+  padding: 0.05rem; /* Уменьше��о значение padding */
   width: 200px;
   height: 300px;
   overflow: hidden;
@@ -15,11 +15,11 @@
   height: 300px; 
   background: var(--tg-theme-button-color);
   border-radius: 4px;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem; /* Уменьшено значение margin-bottom */
 }
 
 .title, .author, .category, .price {
-  margin: 1rem 0;
+  margin: 0.5rem 0; /* Уменьшено значение margin */
   text-align: center;
   overflow: visible;
   white-space: normal;
@@ -39,7 +39,7 @@
 .button-container {
   width: 100%;
   margin-top: auto;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0; /* Уменьшено значение padding */
   display: flex;
   justify-content: space-between;
 }
@@ -58,7 +58,7 @@
   transition: background 0.2s, transform 0.2s;
   border: none;
   flex-shrink: 0;
-  margin: 0 5px;
+  margin: 0 3px; /* Уменьшено значение margin */
 }
 
 .button-container .addBtn:active,
