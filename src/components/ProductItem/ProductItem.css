@@ -2,29 +2,37 @@
   display: flex;
   flex-direction: column;
   border: 1px solid var(--tg-theme-button-color);
-  border-radius: 8px;
-  padding: 10px;
-  width: 150px; 
-  height: 250px; 
-  transition: box-shadow 0.2s; 
+  border-radius: 12px; /* Увеличиваем радиус скругления */
+  padding: 15px; /* Увеличиваем отступы */
+  width: 160px; /* Фиксированная ширина */
+  height: 280px; /* Фиксированная высота */
+  transition: box-shadow 0.3s, transform 0.3s; /* Добавляем анимацию для трансформации */
   overflow: hidden;
+  background: white; /* Добавляем белый фон для контраста */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
 }
 
 .product:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при наведении */
+  transform: translateY(-2px); /* Легкий подъем при наведении */
 }
 
 .img {
   width: 100%;
-  height: 100px; 
+  height: 120px; /* Увеличиваем высоту изображения */
   background: var(--tg-theme-button-color);
-  border-radius: 4px;
-  margin-bottom: 10px; 
+  border-radius: 8px; /* Увеличиваем радиус скругления */
+  margin-bottom: 15px; /* Увеличиваем отступ снизу */
+  display: flex; /* Центрируем содержимое */
+  align-items: center;
+  justify-content: center;
+  color: white; /* Цвет текста на фоне изображения */
+  font-weight: bold; /* Жирный шрифт для текста */
 }
 
 .title, .author, .category, .price {
   margin: 5px 0;
-  font-size: 14px;
+  font-size: 15px; /* Увеличиваем размер шрифта */
   text-align: center;
   overflow: hidden; 
   text-overflow: ellipsis; 
@@ -34,50 +42,49 @@
 
 .title {
   flex: 0 1 auto; 
+  font-weight: bold; /* Жирный шрифт для заголовка */
+  color: var(--tg-theme-button-color); /* Цвет заголовка */
 }
 
 .author, .category, .price {
   flex: 0 0 auto; 
+  color: #666; /* Более светлый цвет для остальных текстов */
 }
 
 .button-container {
   display: flex;
-  justify-content: space-between; /* Размещает кнопки по краям */
-  margin-top: auto; /* Отодвигает контейнер кнопок вниз */
+  justify-content: space-between; 
+  margin-top: auto; 
+  position: relative; /* Позволяет позиционировать кнопки */
+  height: 50px; /* Фиксированная высота для кнопок */
+}
+
+.addBtn, .deleteBtn {
+  width: 40px; /* Фиксированная ширина для квадратных кнопок */
+  height: 40px; /* Фиксированная высота для квадратных кнопок */
+  padding: 0; /* Убираем отступы */
+  background: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  border: none;
+  border-radius: 6px; /* Увеличиваем радиус скругления */
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s; /* Увеличиваем время анимации */
+  font-weight: bold; /* Жирный шрифт для кнопок */
+  position: absolute; /* Позволяет позиционировать кнопки */
 }
 
 .addBtn {
-  width: 48%; /* Уменьшаем ширину, чтобы кнопки не выходили за пределы */
-  padding: 10px 15px;
-  background: var(--tg-theme-button-color);
-  color: var(--tg-theme-button-text-color);
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.addBtn:hover {
-  background: darken(var(--tg-theme-button-color), 10%);
-  transform: scale(1.05); 
+  bottom: 10px; /* Располагаем кнопку "Добавить" в левом нижнем углу */
+  left: 10px; /* Отступ от левого края */
 }
 
 .deleteBtn {
-  width: 48%; /* Уменьшаем ширину, чтобы кнопки не выходили за пределы */
-  padding: 10px 15px;
-  background: var(--tg-theme-button-color);
-  color: var(--tg-theme-button-text-color);
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  bottom: 10px; /* Располагаем кнопку "Удалить" в правом нижнем углу */
+  right: 10px; /* Отступ от правого края */
 }
 
-.deleteBtn:hover {
-  background: darken(var(--tg-theme-button-color), 10%);
+.addBtn:hover, .deleteBtn:hover {
+  background: darken(var(--tg-theme-button-color), 15%); /* Увеличиваем затемнение */
   transform: scale(1.05); 
 }
-
-  
