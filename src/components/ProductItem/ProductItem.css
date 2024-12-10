@@ -24,7 +24,7 @@
   justify-content: center;
 }
 
-.title, .author, .category, .price {
+.title {
   margin: 0.5rem 0; /* Используйте rem для лучшей отзывчивости */
   font-size: 1rem; /* Используйте rem для лучшей отзывчивости */
   text-align: center;
@@ -35,15 +35,15 @@
   flex-shrink: 0; /* Запретить сжатие текста */
 }
 
-.title {
-  flex: 0 1 auto; 
-  font-weight: bold; /* Сделать заголовок жирным */
-  color: var(--tg-theme-title-color); /* Опционально: определить цвет для заголовка */
-}
-
 .author, .category, .price {
-  flex: 0 0 auto; 
-  color: var(--tg-theme-text-color); /* Опционально: определить цвет для текста */
+  margin: 0.5rem 0; /* Используйте rem для лучшей отзывчивости */
+  font-size: 1rem; /* Используйте rem для лучшей отзывчивости */
+  text-align: center;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  max-height: 20px; 
+  flex-shrink: 0; /* Запретить сжатие текста */
 }
 
 .button-container {
