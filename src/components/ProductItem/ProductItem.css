@@ -3,8 +3,8 @@
   flex-direction: column;
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
-  padding: 1rem; /* Уменьшено значение отступа для боков */
-  width: 200px; /* Увеличено значение ширины карточек */
+  padding: 1rem; /* Отступы для карточки */
+  width: 200px; /* Ширина карточек */
   height: 300px; /* Фиксированная высота для всех карточек */
   overflow: hidden;
   margin-top: auto;
@@ -15,20 +15,20 @@
   height: 100px; 
   background: var(--tg-theme-button-color);
   border-radius: 4px;
-  margin-bottom: 1rem; /* Увеличен отступ для лучшей адаптивности */
+  margin-bottom: 1rem; /* Отступ для изображения */
 }
 
 .title, .author, .category, .price {
-  margin: 1rem 0; /* Увеличены отступы для лучшей адаптивности */
-  font-size: 1rem; /* Используйте rem для лучшей адаптивности */
+  margin: 1rem 0; /* Отступы для текста */
+  font-size: 1rem; /* Размер шрифта */
   text-align: center;
-  overflow: visible; /* Изменено на visible, чтобы текст был виден полностью */
-  white-space: normal; /* Изменено на normal, чтобы текст мог переноситься на несколько строк */
+  overflow: visible; /* Текст будет виден полностью */
+  white-space: normal; /* Текст может переноситься на несколько строк */
 }
 
 .title {
   flex: 0 1 auto; /* Заголовок будет занимать необходимое пространство */
-  font-weight: bold; /* Сделать заголовок жирным */
+  font-weight: bold; /* Жирный заголовок */
 }
 
 .author, .category, .price {
@@ -38,18 +38,18 @@
 .button-container {
   width: 100%;
   margin-top: auto;
-  padding: 0.5rem 0; /* Уменьшено значение отступа по бокам */
-  display: flex; /* Используйте flex для лучшего выравнивания */
+  padding: 0.5rem 0; /* Отступы сверху и снизу */
+  display: flex; /* Используйте flex для выравнивания */
   justify-content: space-between; /* Равномерное распределение кнопок */
 }
 
 .button-container .addBtn,
 .button-container .deleteBtn {
-  width: 40px; /* Увеличена ширина кнопок */
-  height: 40px; /* Увеличена высота кнопок */
+  width: 40px; /* Ширина кнопок */
+  height: 40px; /* Высота кнопок */
   text-align: center;
-  line-height: 40px; /* Увеличена высота строки для кнопок */
-  border-radius: 4px; /* Последовательный радиус границы */
+  line-height: 40px; /* Высота строки для кнопок */
+  border-radius: 4px; /* Радиус границы */
   background: var(--tg-theme-button-color);
   color: var(--tg-theme-button-text-color);
   outline: none;
@@ -57,6 +57,7 @@
   transition: background 0.2s, transform 0.2s; /* Анимация для кнопок */
   border: none;
   flex-shrink: 0; /* Предотвращает сжатие кнопок */
+  margin: 0 5px; /* Добавлен отступ по бокам для кнопок */
 }
 
 .button-container .addBtn:active,
