@@ -48,17 +48,12 @@
     margin-top: auto;
     padding: 10px 15px;
     justify-content: center;
+    position: relative;
   }
 
   .button-container .addBtn {
-    /* width: 40%;
-    padding: 10px 15px;
-    
-    
-    ;
-    margin-top: auto; */
-    position:  relative;
-    right: 20px;
+    position:  absolute;
+    left: 20px;
     bottom: 20px;
     width: 35px;
     height: 35px;
@@ -80,16 +75,8 @@
 }
 
 .button-container .deleteBtn {
-  /* width: 40%;
-  position: relative;
-    padding: 10px 15px;
-    
-    
-    
-    
-    margin-top: auto; */
-    position:  relative;
-    left: 20px;
+    position:  absolute;
+    right: 20px;
     bottom: 20px;
     width: 35px;
     height: 35px;
