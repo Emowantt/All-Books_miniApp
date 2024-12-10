@@ -19,12 +19,15 @@ const ProductItem = ({product, className, onAdd}) => {
             <div className='price'>
                 <b>{product.price}</b>
             </div>
-            <button className = {'addBtn'} onClick = {onAddHandler}>
-                +
-            </button>
-            <button className='deleteBtn' onClick={onDeleteHandler}>
-                -
-            </button>
+            <div className='.button-container'>
+                <button className = {'addBtn'} onClick = {onAddHandler}>
+                    +
+                </button>
+                <button className='deleteBtn' onClick={onDeleteHandler}>
+                    -
+                </button>
+            </div>
+            
         </div>
     );
 };
