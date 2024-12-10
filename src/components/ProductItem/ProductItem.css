@@ -8,21 +8,22 @@
     height: 250px; 
     transition: box-shadow 0.2s; 
     overflow: hidden;
-}
-
-.product:hover {
+    border: 1px solid var(--tg-theme-button-color);
+  }
+  
+  .product:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-.img {
+  }
+  
+  .img {
     width: 100%;
     height: 100px; 
     background: var(--tg-theme-button-color);
     border-radius: 4px;
     margin-bottom: 10px; 
-}
-
-.title, .author, .category, .price {
+  }
+  
+  .title, .author, .category, .price {
     margin: 5px 0;
     font-size: 14px;
     text-align: center;
@@ -30,25 +31,19 @@
     text-overflow: ellipsis; 
     white-space: nowrap; 
     max-height: 20px; 
-}
-
-.title {
+  }
+  
+  
+  .title {
     flex: 0 1 auto; 
-}
-
-.author, .category, .price {
+  }
+  
+  .author, .category, .price {
     flex: 0 0 auto; 
-}
+  }
 
-.button-container {
-    display: flex;
-    justify-content: space-between; /* Размещает кнопки по краям */
-    margin-top: auto; /* Отодвигает контейнер кнопок вниз */
+  .addBtn {
     width: 100%;
-}
-
-.addBtn {
-    width: 25%; /* Уменьшаем ширину, чтобы кнопки не выходили за пределы */
     padding: 10px 15px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
@@ -57,6 +52,7 @@
     outline: none;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
+    margin-top: auto;
 }
 
 .addBtn:hover {
@@ -65,7 +61,7 @@
 }
 
 .deleteBtn {
-    width: 25%; /* Уменьшаем ширину, чтобы кнопки не выходили за пределы */
+  width: 100%;
     padding: 10px 15px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
@@ -74,11 +70,6 @@
     outline: none;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
+    margin-top: auto;
 }
-
-.deleteBtn:hover {
-    background: darken(var(--tg-theme-button-color), 10%);
-    transform: scale(1.05); 
-}
-
   
