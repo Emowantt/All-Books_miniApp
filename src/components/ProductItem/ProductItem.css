@@ -4,8 +4,8 @@
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
   padding: 1rem; /* Используйте rem для лучшей отзывчивости */
-  width: 150px; 
-  height: 250px; 
+  width: 250px; 
+  height: 350px; 
   max-height: 250px; /* Ограничение высоты карточки */
   transition: box-shadow 0.3s, transform 0.3s; /* Добавлено преобразование для масштабирования */
   overflow: hidden;
