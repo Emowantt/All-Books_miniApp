@@ -42,7 +42,13 @@
     flex: 0 0 auto; 
   }
 
-  .addBtn {
+  .button-container {
+    width: 100%;
+    margin-top: auto;
+    padding: 10px 15px;
+  }
+
+  .button-container .addBtn {
     /* width: 40%;
     padding: 10px 15px;
     background: var(--tg-theme-button-color);
@@ -53,7 +59,7 @@
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
     margin-top: auto; */
-    position:  absolute;
+    position:  relative;
     right: 20px;
     bottom: 20px;
     width: 35px;
@@ -63,12 +69,12 @@
     border-radius: 10px;
 }
 
-.addBtn:hover {
+.button-container .addBtn:hover {
     background: darken(var(--tg-theme-button-color), 10%);
     transform: scale(1.05); 
 }
 
-.deleteBtn {
+.button-container .deleteBtn {
   /* width: 40%;
   position: relative;
     padding: 10px 15px;
@@ -80,7 +86,7 @@
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
     margin-top: auto; */
-    position:  absolute;
+    position:  relative;
     left: 20px;
     bottom: 20px;
     width: 35px;
