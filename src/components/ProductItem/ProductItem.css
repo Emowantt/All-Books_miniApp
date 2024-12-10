@@ -29,10 +29,8 @@
   font-size: 1rem; /* Используйте rem для лучшей отзывчивости */
   text-align: center;
   overflow: hidden; 
-  text-overflow: ellipsis; 
-  white-space: nowrap; 
-  max-height: 20px; 
-  flex-shrink: 0; /* Запретить сжатие текста */
+  max-height: 40px; /* Ограничение высоты заголовка */
+  line-height: 1.2; /* Высота строки для лучшего отображения */
 }
 
 .author, .category, .price {
