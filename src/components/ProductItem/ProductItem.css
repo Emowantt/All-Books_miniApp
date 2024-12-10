@@ -3,13 +3,14 @@
   flex-direction: column;
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
-  padding: 1rem; /* Use rem for better responsiveness */
+  padding: 1rem; /* Используйте rem для лучшей отзывчивости */
   width: 150px; 
   height: 250px; 
-  transition: box-shadow 0.3s, transform 0.3s; /* Added transform for scaling */
+  max-height: 250px; /* Ограничение высоты карточки */
+  transition: box-shadow 0.3s, transform 0.3s; /* Добавлено преобразование для масштабирования */
   overflow: hidden;
   margin-top: auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лёгкая тень для глубины */
 }
 
 .img {
@@ -17,39 +18,40 @@
   height: 100px; 
   background: var(--tg-theme-button-color);
   border-radius: 4px;
-  margin-bottom: 0.5rem; /* Use rem for better responsiveness */
-  display: flex; /* Center image if using an actual image */
+  margin-bottom: 0.5rem; /* Используйте rem для лучшей отзывчивости */
+  display: flex; /* Центрирование изображения, если используется фактическое изображение */
   align-items: center;
   justify-content: center;
 }
 
 .title, .author, .category, .price {
-  margin: 0.5rem 0; /* Use rem for better responsiveness */
-  font-size: 1rem; /* Use rem for better responsiveness */
+  margin: 0.5rem 0; /* Используйте rem для лучшей отзывчивости */
+  font-size: 1rem; /* Используйте rem для лучшей отзывчивости */
   text-align: center;
   overflow: hidden; 
   text-overflow: ellipsis; 
   white-space: nowrap; 
   max-height: 20px; 
+  flex-shrink: 0; /* Запретить сжатие текста */
 }
 
 .title {
   flex: 0 1 auto; 
-  font-weight: bold; /* Make title bold */
-  color: var(--tg-theme-title-color); /* Optional: Define a color for the title */
+  font-weight: bold; /* Сделать заголовок жирным */
+  color: var(--tg-theme-title-color); /* Опционально: определить цвет для заголовка */
 }
 
 .author, .category, .price {
   flex: 0 0 auto; 
-  color: var(--tg-theme-text-color); /* Optional: Define a color for text */
+  color: var(--tg-theme-text-color); /* Опционально: определить цвет для текста */
 }
 
 .button-container {
   width: 100%;
   margin-top: auto;
-  padding: 0.5rem 0; /* Use rem for better responsiveness */
-  display: flex; /* Use flex for better alignment */
-  justify-content: space-between; /* Space buttons evenly */
+  padding: 0.5rem 0; /* Используйте rem для лучшей отзывчивости */
+  display: flex; /* Используйте flex для лучшего выравнивания */
+  justify-content: space-between; /* Равномерное распределение кнопок */
 }
 
 .button-container .addBtn,
@@ -58,24 +60,24 @@
   height: 35px;
   text-align: center;
   line-height: 35px;
-  border-radius: 4px; /* Consistent border-radius */
+  border-radius: 4px; /* Последовательный радиус границы */
   background: var(--tg-theme-button-color);
   color: var(--tg-theme-button-text-color);
   outline: none;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s; /* Added box-shadow transition */
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s; /* Добавлено преобразование тени */
   border: none;
 }
 
 .button-container .addBtn:hover,
 .button-container .deleteBtn:hover {
   background: darken(var(--tg-theme-button-color), 10%);
-  transform: scale(1.1); /* Slightly larger scale on hover */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow on hover for depth */
+  transform: scale(1.1); /* Немного увеличенный масштаб при наведении */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень при наведении для глубины */
 }
 
 .button-container .addBtn:focus,
 .button-container .deleteBtn:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3); /* Custom focus outline */
+  outline: none; /* Удалить стандартный контур фокуса */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3); /* Пользовательский контур фокуса */
 }
