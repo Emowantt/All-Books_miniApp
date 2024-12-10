@@ -69,9 +69,8 @@
 }
 
 .deleteBtn {
-  width: 40%;
+  /* width: 40%;
   position: relative;
-
     padding: 10px 15px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
@@ -80,6 +79,15 @@
     outline: none;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
-    margin-top: auto;
+    margin-top: auto; */
+    position:  absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+  
 }
   
