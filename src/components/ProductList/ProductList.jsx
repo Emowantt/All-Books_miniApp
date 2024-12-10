@@ -85,14 +85,13 @@ const getTotalPrice = (items = [],) => {
 }
 
 const ProductList = () => {
+  const [addedItems, setAddedItems] = useState([]);
+  const { tg } = useTelegram();
 
-    const [addedItems, setAddedItems] = useState([]);
-    const {tg} = useTelegram();
+  const onAdd = (product) => {
+      const alreadyAdded = addedItems.find(item => item.id === product.id);
 
-    const onAdd = (product) => {
-        const alreadyAdded = addedItems.find(item => item.id === product.id);
-
-        if (alreadyAdded) {
+      if (alreadyAdded) {
           return; // Игнорируем повторное нажатие
       }
 
@@ -100,38 +99,34 @@ const ProductList = () => {
       const newItems = [...addedItems, product];
       setAddedItems(newItems);
 
-        if(newItems.length === 0) {
-            tg.MainButton.hide();
-        } else {
-            tg.MainButton.show();
-            tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽`})
-        }
-    }
+      tg.MainButton.show();
+      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽` });
+  };
 
-    const onDelete = (product) => {
+  const onDelete = (product) => {
       const newItems = addedItems.filter(item => item.id !== product.id);
       setAddedItems(newItems);
 
       if (newItems.length === 0) {
           tg.MainButton.hide();
       } else {
-        tg.MainButton.show();
-        tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽`})
+          tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽` });
       }
   };
 
-    return (
-        <div className='list'>
-            {products.map(item => (
-                <ProductItem 
-                    product = {item}
-                    onAdd = {onAdd}
-                    className={'item'}
-                    onDelete = {onDelete}
-                />
-            ))}
-        </div>
-    );
+  return (
+      <div className='list'>
+          {products.map(item => (
+              <ProductItem 
+                  key={item.id} // Добавьте уникальный ключ для каждого элемента
+                  product={item}
+                  onAdd={onAdd}
+                  onDelete={onDelete}
+              />
+          ))}
+      </div>
+  );
 };
+
 
 export default ProductList;
