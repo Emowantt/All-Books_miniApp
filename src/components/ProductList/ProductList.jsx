@@ -109,6 +109,18 @@ const ProductList = () => {
         }
     }
 
+    const onDelete = (product) => {
+      const newItems = addedItems.filter(item => item.id !== product.id);
+      setAddedItems(newItems);
+
+      if (newItems.length === 0) {
+          tg.MainButton.hide();
+      } else {
+          tg.MainButton.show();
+          tg.MainButton.setParams({ text: 'Купить ' + getTotalPrice(newItems) });
+      }
+  };
+
     return (
         <div className='list'>
             {products.map(item => (
@@ -116,6 +128,7 @@ const ProductList = () => {
                     product = {item}
                     onAdd = {onAdd}
                     className={'item'}
+                    onDelete = {onDelete}
                 />
             ))}
         </div>

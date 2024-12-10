@@ -1,13 +1,13 @@
 import React from 'react';
 import './ProductItem.css';
 
-const ProductItem = ({product, className, onAdd}) => {
+const ProductItem = ({product, className, onAdd, onDelete}) => {
     
     const onAddHandler = () => {
         onAdd(product);
     }
     const onDeleteHandler = () => {
-        onDeleteHandler(product);
+        onDelete(product);
     }
 
     return (
