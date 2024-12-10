@@ -39,15 +39,15 @@
 .button-container {
   width: 100%;
   margin-top: auto;
-  padding: 0.5rem 0; /* Use rem for better responsiveness */
+  padding: 0.5rem; /* Use rem for better responsiveness */
   display: flex; /* Use flex for better alignment */
   justify-content: space-between; /* Space buttons evenly */
 }
 
 .button-container .addBtn,
 .button-container .deleteBtn {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   line-height: 35px;
   border-radius: 4px; /* Consistent border-radius */
