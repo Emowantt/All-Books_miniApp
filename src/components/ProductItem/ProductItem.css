@@ -42,8 +42,13 @@
     flex: 0 0 auto; 
   }
 
-  .addBtn {
+  .button-container {
     width: 100%;
+    padding: 10px 15px;
+  }
+
+  .addBtn {
+    width: 40%;
     padding: 10px 15px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
@@ -61,7 +66,7 @@
 }
 
 .deleteBtn {
-  width: 100%;
+  width: 40%;
     padding: 10px 15px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
