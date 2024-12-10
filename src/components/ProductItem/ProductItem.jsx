@@ -20,12 +20,12 @@ const ProductItem = ({product, className, onAdd, onDelete}) => {
                 <b>{product.price}₽</b>
             </div>
             <div className='button-container'>
-                <button className = {'addBtn'} onClick = {onAddHandler}>
-                    +
-                </button>
-                <button className='deleteBtn' onClick={onDeleteHandler}>
-                    -
-                </button>
+            <button className='addBtn' onTouchStart={onAddHandler} onClick={onAddHandler}>
+                +
+            </button>
+            <button className='deleteBtn' onTouchStart={onDeleteHandler} onClick={onDeleteHandler}>
+                -
+            </button>
             </div>
             
         </div>
