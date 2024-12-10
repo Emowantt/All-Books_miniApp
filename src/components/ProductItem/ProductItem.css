@@ -3,7 +3,7 @@
   flex-direction: column;
   border: 1px solid var(--tg-theme-button-color);
   border-radius: 8px;
-  padding: 0.3rem;
+  padding: 0.1rem;
   width: 200px;
   height: 300px;
   overflow: hidden;
@@ -33,7 +33,7 @@
 
 .author, .category, .price {
   flex: 0 1 auto; 
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .button-container {
