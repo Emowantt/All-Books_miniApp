@@ -91,12 +91,14 @@ const ProductList = () => {
   };
 
   const onSendData = useCallback(() => {
+    console.log('Main button clicked');
     const totalPrice = getTotalPrice(addedItems);
     const data = {
       products: addedItems,
       totalPrice: totalPrice,
       queryId,
     };
+
     fetch('http://192.168.0.62:8000/web-data', {
       method: 'POST',
       headers: {
@@ -105,6 +107,8 @@ const ProductList = () => {
       body: JSON.stringify(data),
     });
   }, [addedItems, queryId]);
+
+  
 
   useEffect(() => {
     tg.onEvent('mainButtonClicked', onSendData);
