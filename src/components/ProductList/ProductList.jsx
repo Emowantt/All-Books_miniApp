@@ -139,7 +139,7 @@ const ProductList = () => {
       if (newItems.length === 0) {
           tg.MainButton.hide();
       } else {
-          tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(addedItems)}₽` });
+          tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽` });
       }
   };
 
