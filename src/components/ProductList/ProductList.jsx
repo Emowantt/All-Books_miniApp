@@ -78,69 +78,65 @@ const products = [
       },
 ]
 
-const getTotalPrice = (items = [],) => {
-    return items.reduce((acc, item) => {
-        return acc += parseFloat(item.price)
-    }, 0)
-}
-
 const ProductList = () => {
   const [addedItems, setAddedItems] = useState([]);
   const { tg, queryId } = useTelegram();
+  const [itemCount, setItemCount] = useState(0); // Состояние для количества товаров
+
+  // Функция для подсчета общей стоимости
+  const getTotalPrice = (items = []) => {
+    return items.reduce((acc, item) => {
+      const price = parseFloat(item.price);
+      return acc + (isNaN(price) ? 0 : price);
+    }, 0);
+  };
 
   const onSendData = useCallback(() => {
+    const totalPrice = getTotalPrice(addedItems);
     const data = {
       products: addedItems,
-      totalPrice: getTotalPrice(addedItems),
+      totalPrice: totalPrice,
       queryId,
-    }
+    };
     fetch('http://localhost:8000', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data)
-    })
-
-  }, [addedItems, queryId])
+      body: JSON.stringify(data),
+    });
+  }, [addedItems, queryId]);
 
   useEffect(() => {
-    tg.onEvent('mainButtonClicked', onSendData)
+    tg.onEvent('mainButtonClicked', onSendData);
     return () => {
-      tg.offEvent('mainButtonClicked', onSendData)
+      tg.offEvent('mainButtonClicked', onSendData);
+    };
+  }, [onSendData, tg]);
+
+  // useEffect для обновления количества товаров
+  useEffect(() => {
+    setItemCount(addedItems.length); // Обновляем количество товаров
+    if (itemCount > 0) {
+      tg.MainButton.show(); // Показываем кнопку, если есть товары
+      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(addedItems)}₽ (${itemCount})` }); // Обновляем текст кнопки
+    } else {
+      tg.MainButton.hide(); // Скрываем кнопку, если нет товаров
     }
-    
-  })
+  }, [addedItems, itemCount, tg]); // Добавляем зависимости
 
   const onAdd = (product) => {
-      const alreadyAdded = addedItems.find(item => item.id === product.id);
-      console.log('Trying to add:', product);
-
-      if (alreadyAdded) {
-          console.log('Product already added:', product);
-          return; 
-      }
-
-      
-      const newItems = [...addedItems, product];
-      setAddedItems(newItems);
-      console.log('Added items:', newItems);
-
-      tg.MainButton.show();
-      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽` });
+    const alreadyAdded = addedItems.find(item => item.id === product.id);
+    if (alreadyAdded) {
+      console.log('Product already added:', product);
+      return; 
+    }
+    setAddedItems([...addedItems, product]);
   };
 
   const onDelete = (product) => {
-      const newItems = addedItems.filter(item => item.id !== product.id);
-      console.log('Trying to delete:', product);
-      setAddedItems(newItems);
-      console.log('Remaining items:', newItems);
-
-      if (newItems.length === 0) {
-          tg.MainButton.hide();
-      } else {
-          tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽` });
-      }
+    const newItems = addedItems.filter(item => item.id !== product.id);
+    setAddedItems(newItems);
   };
 
   return (
