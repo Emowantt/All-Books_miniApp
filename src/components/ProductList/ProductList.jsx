@@ -81,9 +81,8 @@ const products = [
 const ProductList = () => {
   const [addedItems, setAddedItems] = useState([]);
   const { tg, queryId } = useTelegram();
-  const [itemCount, setItemCount] = useState(0); // Состояние для количества товаров
+  const [itemCount, setItemCount] = useState(0);
 
-  // Функция для подсчета общей стоимости
   const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
       const price = parseFloat(item.price);
@@ -98,7 +97,7 @@ const ProductList = () => {
       totalPrice: totalPrice,
       queryId,
     };
-    fetch('http://localhost:8000', {
+    fetch('http://5.35.13.62:8000', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -114,16 +113,16 @@ const ProductList = () => {
     };
   }, [onSendData, tg]);
 
-  // useEffect для обновления количества товаров
+  
   useEffect(() => {
-    setItemCount(addedItems.length); // Обновляем количество товаров
+    setItemCount(addedItems.length);
     if (itemCount > 0) {
-      tg.MainButton.show(); // Показываем кнопку, если есть товары
-      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(addedItems)}₽ (${itemCount})` }); // Обновляем текст кнопки
+      tg.MainButton.show(); 
+      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(addedItems)}₽ (${itemCount})` }); 
     } else {
-      tg.MainButton.hide(); // Скрываем кнопку, если нет товаров
+      tg.MainButton.hide();
     }
-  }, [addedItems, itemCount, tg]); // Добавляем зависимости
+  }, [addedItems, itemCount, tg]);
 
   const onAdd = (product) => {
     const alreadyAdded = addedItems.find(item => item.id === product.id);
