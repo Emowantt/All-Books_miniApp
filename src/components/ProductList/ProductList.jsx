@@ -81,7 +81,6 @@ const products = [
 const ProductList = () => {
   const [addedItems, setAddedItems] = useState([]);
   const { tg, queryId } = useTelegram();
-  const [itemCount, setItemCount] = useState(0);
 
   const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
@@ -119,14 +118,15 @@ const ProductList = () => {
 
   
   useEffect(() => {
-    setItemCount(addedItems.length);
-    if (itemCount > 0) {
+    
+    // setItemCount(addedItems.length);
+    if (addedItems.length > 0) {
       tg.MainButton.show(); 
-      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(addedItems)}₽ (${itemCount})` }); 
+      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(addedItems)}₽ (${addedItems.length})` }); 
     } else {
       tg.MainButton.hide();
     }
-  }, [addedItems, itemCount, tg]);
+  }, [addedItems, tg]);
 
   const onAdd = (product) => {
     const alreadyAdded = addedItems.find(item => item.id === product.id);
