@@ -127,7 +127,7 @@ const ProductList = () => {
       console.log('Added items:', newItems);
 
       tg.MainButton.show();
-      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(addedItems)}₽` });
+      tg.MainButton.setParams({ text: `К оформлению: ${getTotalPrice(newItems)}₽` });
   };
 
   const onDelete = (product) => {
